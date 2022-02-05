@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="./styles/assets/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>Software Craftsmanship - OOP/D Techniques</h1>
+</header>
+<section class="content">
+<div class="sect1">
+<h2 id="_craftsmanship_manifesto">1. Craftsmanship Manifesto</h2>
+<div class="sectionbody">
+<p class="">Not only working software, but also well-crafted software</p>
+<p class="">Not only responding to change, but also steadily adding value</p>
+<p class="">Not only individuals and interactions, but also a community of professionals</p>
+<p class="">Not only customer collaboration, but also productive partnerships</p>
+<div class="sect2">
+<h3 id="_craftsmanship_methodologies">1.1. Craftsmanship Methodologies</h3>
+<div class="sect3">
+<h4 id="_tdd">1.1.1. TDD</h4>
+<p class="">WIP</p>
+</div>
+<div class="sect3">
+<h4 id="_bdd">1.1.2. BDD</h4>
+<p class="">WIP</p>
+</div>
+<div class="sect3">
+<h4 id="_pair_programming">1.1.3. Pair Programming</h4>
+<p class="">WIP</p>
+</div>
+<div class="sect3">
+<h4 id="_mob_programming">1.1.4. Mob Programming</h4>
+<p class="">WIP</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grasp">2. GRASP</h2>
+<div class="sectionbody">
+<p class="">The acronym stands for General Responsibility Assignment Software Patterns (yes, please use GRASP), it groups nine design principles for assigning responsibility to objects.</p>
+<p class="">For each principle below, an associated question or a statement is synthetized from the book to understand how to apply the principle:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Expert (Information Expert):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What object (or group of objects) has the information needed to fulfill a certain responsibility?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Creator:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Based on the domain model what object B should be responsible for creating object A?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Controller:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Object with the responsibility to route UI requests to specific business logic.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Indirection:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Object(s) with the responsability to maintain low coupling between components by routing the association.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Low coupling:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Assign responsibility to objects in a way that minimize coupling between them.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>High cohesion:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To what degree are my object operations functionally related, do all operations in my object belong together?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Polymorphism:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Avoid conditional programming when designing varying behavior by types, leverage polymorphic operations instead.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Protected variations:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>How can I design my objects so that I reduce the impact between them in case of variation?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pure Fabrication:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>An object that is not representing a real word problem domain and with the only responsibility to support high cohesion and low coupling.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gof_patterns">3. GoF Patterns</h2>
+<div class="sectionbody">
+<p class="">GoF are documented in the famous Design Patterns: Elements of Reusable Object Oriented Software (by Erich Gamma, Richard Helm, Ralph Jonhson, John Vlissides)</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gof_patterns_creational">4. GoF Patterns - Creational</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Abstract Factory:</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern when you want to provide a mechanism to create families of objects without specifying their concrete classes.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Builder:</p>
+</li>
+</ul>
+</div>
+<p class="">The idea behind this pattern it to provide a mechanism to allow create of an object based on different representation. Usually if you have in your design a class with multiples constructors having different types of parameters, then this class is a candidate for a Builder pattern.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Factory method:</p>
+</li>
+</ul>
+</div>
+<p class="">This pattern allows you to defer instantiation of a class to subclasses. This is better achieved through an interface.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Prototype:</p>
+</li>
+</ul>
+</div>
+<p class="">Create multiple objects based on an existing prototype instance. This pattern is better used when an object creation has a significant cost or most of the representation is already known ahead of the need of creation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Singleton:</p>
+</li>
+</ul>
+</div>
+<p class="">This pattern ensure that a class has one and only one instance available. The pattern must provide a way to access this single instance.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gof_patterns_structural">5. GoF Patterns - Structural</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Adapter</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern when you have a class that needs to be used by a client, but that client expects a different or a specific interface.
+You can adapt an existing class to be used by another class where the initial type would not be acceptable.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bridge</p>
+</li>
+</ul>
+</div>
+<p class="">Better used when you want to decouple an abstraction from its implementation. Think about when a client requires a specific abstraction with multiple possible implementations. The client is in charge of specifying the abstraction to be used while providing a bridge to another abstraction for which multiple implementations are possible.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Composite</p>
+</li>
+</ul>
+</div>
+<p class="">Think about this pattern when you want to apply to a different type of classes the same function or use them as if they were the same type of objects. A client class would be able to work with different type of objects at runtime uniformly, while these objects are different.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Decorator</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern when you want to add more responsibility to existing objects at runtime without modifying its existing interface. The goal of this pattern is to enhance the parent object behavior by wrapping it with the same interface but provide an enhanced behavior.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Facade</p>
+</li>
+</ul>
+</div>
+<p class="">This pattern is helpful when you want to provide a higher-level interface to a complex subsystem. The facade provides a simple and clear access to a group of classes based on the expected behavior scope.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Flyweight</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern when your objects representation is heavy in memory and where you can factor some of the state into separate classes to be referenced by the main objects. The idea behind this pattern is that repeating information can be factored into separate classes and referenced to make our instantiated objects less heavy.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Proxy</p>
+</li>
+</ul>
+</div>
+<p class="">Think of this pattern as an adapter with the same interface, the idea to wrap a service operation around another object that can control the behavior, for example lazy loading, calling remote operation and what not.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gof_patterns_behavioral">6. GoF Patterns - Behavioral</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Chain of responsibility</p>
+</li>
+</ul>
+</div>
+<p class="">Think about this pattern when you want to the chain the processing of a request across multiples objects. Basically, pass the request across a chain of multiples objects to allow each to handle the request.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Command</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern when a client needs to issue different type of requests. This pattern help you avoid having a large inheritance hierarchy and increase your separation of concerns between the request and the implementation. This pattern allows you also to implement undo operation by saving the state in order to reverse the operation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Interpreter</p>
+</li>
+<li>
+<p>Iterator</p>
+</li>
+</ul>
+</div>
+<p class="">This pattern allows you to provide an access to elements of an aggregate in a predefined order without exposing the implementation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mediator</p>
+</li>
+</ul>
+</div>
+<p class="">When you need to increase loose coupling and create a boundary during the interactions between objects, this pattern comes at help by keeping objects from refering to each other explicitly.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Memento</p>
+</li>
+</ul>
+</div>
+<p class="">When you think about this pattern, think about the undo mechanism (CTRL-Z). This pattern allow you to capture and externalize the state of an object in order to be able to restore it when needed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Observer</p>
+</li>
+</ul>
+</div>
+<p class="">This pattern help you implement the notification mechanism. Ensure that multiples objects are notified when on object is modified.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>State</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern when you want to change an object behavior during runtime and when its state change. You can think of an object being Locked or Unlocked, depending if a user have clicked on a certain button.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Strategy</p>
+</li>
+</ul>
+</div>
+<p class="">Lets imagine you have different algorithm to do a particular operation. This pattern help you select the right approach upon need, basically, vary the implementation based on strategy upon your need.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Template Method</p>
+</li>
+</ul>
+</div>
+<p class="">Use this pattern whenever you want to provide a partial implementation of an algorithm and defer to subclass the rest of the implementation that is specific to the subclass.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Visitor</p>
+</li>
+</ul>
+</div>
+<p class="">This pattern come at help when you want to apply a certain behavior on an object without having to integrate it into the structure of the class. The pattern let you visit an object in a collection and apply a certain behavior.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solid">7. SOLID</h2>
+<div class="sectionbody">
+<p class="">The acronym is composed of the first letter of each principle that is described as follow:</p>
+<div class="olist arabic do">
+<ol class="arabic">
+<li>
+<p>Single Responsibility (SRP):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A class should have one and only one reason to change.</p>
+</li>
+<li>
+<p>Higher cohesion within a class and clear responsibility.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Open Closed (OCP):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A class should be open for extension but closed for modification.</p>
+</li>
+<li>
+<p>Make sure that your classes don&#8217;t require modification each time you want to add capabilities.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Liskov Substitution (LSP):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Be careful with inheritance, a subclass must be able to replace a parent class without impact on the implementation.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Interface Segregation (ISP):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure your interfaces are as small as possible, high cohesion between the interface methods.</p>
+</li>
+<li>
+<p>If your implementation is forced to implement an interface they don&#8217;t use then you need to split your interface into a smaller one.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Dependency Inversion:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When one module depends on another, its better that the dependency is managed through abstractions.</p>
+</li>
+<li>
+<p>The higher modules should always hold the dependency abstraction.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<p class="">Each pattern will be described using the ptolemy project or other teams examples. A reference will be pointing to the specific application classes implementing the example.</p>
+</div>
+</div>
+<div class="sect1 authors">
+<div class="author">
+              <div class="author-avatar"><img src="./styles/assets/avatar.jpg"/></div>
+              <div class="author-name"><a href="https://github.com/nabil">@nabil</a></div>
+              <div class="author-bio">Eternal Coder</div>
+            </div>
+          
+</div>
+</section>
+</body>

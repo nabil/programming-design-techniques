@@ -1,28 +1,37 @@
-# Programming Design Techniques and Craftsmanship
-Tracking common OOP/D principles, a popularization approach.
+= Programming Techniques & Philosophy
+nabil <https://github.com/nabil>
+:imagesdir: styles/assets
+:supertitle: Software Craftsmanship - OOP/D Techniques
+:authorbio: Eternal Coder
+:pdf-width: 508mm
+:pdf-height: 361mm
+:sectnums:
 
-When I think about programming design techniques to use when solving a particular problem, the first obvious idea that come to the mind is that there could be as much unique techniques and design approach as the number of developers approaching a problem and they all can do the job. Nevertheless, when we factor in elements like maintainability and testability this become a completely different story. Experienced developers knows that some techniques they used in their previous projects makes their code more maintainable and easier to work with, while other techniques might just make the code impossible maintain. These battle proven techniques are very well documented by the industry.
+== Craftsmanship Manifesto
 
-While having the right techniques or patterns is usually enough to produce quality software when we work alone on a small application, having an overall approach is much better when if we have a large team or a complex application. This is where [Software Craftsmanship](https://en.wikipedia.org/wiki/Software_craftsmanship) come to help. This approach to software development is well explained through the manifesto [values](http://manifesto.softwarecraftsmanship.org/):  
+Not only working software, but also well-crafted software 
 
-* *Not only working software*, **but also well-crafted software** 
-* *Not only responding to change*, **but also steadily adding value** 
-* *Not only individuals and interactions*, **but also a community of professionals** 
-* *Not only customer collaboration*, **but also productive partnerships** 
+Not only responding to change, but also steadily adding value  
 
-[In the pursuit of the items on the left, the items on the right become indispensable](http://manifesto.softwarecraftsmanship.org/). 
+Not only individuals and interactions, but also a community of professionals 
 
-A working software is required to be well crafted, i.e based on tools and techniques that ensure good design and quality code, ex TDD, BDD, Pair Programming, Code Review, Mob Programming. We should be able to steadily add value by continuously improving our code. We could rely on a community of professionals to sharpen our craft. This can be done by sharing among us best practices, experience and knowledge. Productive collaboration should not be limited to our community, we should also extend it to our customers by helping them understand the technologies challenges and for us better understand what problem they are trying to solve in order to provide a software that is aligned with our customer expectations. 
+Not only customer collaboration, but also productive partnerships 
 
-This repository aims at referencing and explaining programming design techniques (also called principles or patterns) that can help make our code more maintainable and testable while also introducing some of the Software Craftsmanship best practices. For example, the design techniques examples will be provided through the Community of professionals approach.  
+=== Methodologies
 
-Let’s get started. The most renowned design techniques are GRASP, GoF and SOLID.
+==== TDD
+WIP
 
-[Greg Larman](https://www.craiglarman.com/wiki/index.php?title=Main_Page) first synthesised the GRASP principles in his book *Applying UML and Patterns* (Chapter 17), GoF are documented in the famous [Design Patterns](https://fr.wikipedia.org/wiki/Design_Patterns): Elements of Reusable Object Oriented Software (by Erich Gamma, Richard Helm, Ralph Jonhson, John Vlissides) and SOLID principles are known to have been documented by Robert C. Martin while the accronym was coined by Michael Feathers. [You can find a little bit more history here](https://wiki.c2.com/?HistoryOfPatterns).
+==== BDD
+WIP
 
-As a side note, if you are a software craftsman starting your career and you ask me what book you should read first, I would definitely recommend to start with carefully reading *Applying UML and Patterns*.
+==== Pair Programming
+WIP
 
-### GRASP 
+==== Mob Programming
+WIP
+
+== GRASP
 The acronym stands for General Responsibility Assignment Software Patterns (yes, please use GRASP), it groups nine design principles for assigning responsibility to objects. 
 
 For each principle below, an associated question or a statement is synthetized from the book to understand how to apply the principle:
@@ -46,23 +55,13 @@ For each principle below, an associated question or a statement is synthetized f
 9. Pure Fabrication:
     - An object that is not representing a real word problem domain and with the only responsibility to support high cohesion and low coupling. 
 
-### GoF Patterns
+== GoF Patterns
 
-| Creational       | Structural      | Behavioral                | 
-| -----------------|-----------------|---------------------------|
-| Abstract Factory | Adapter         | Chain of responsibility   |
-| Builder          | Bridge          | Command                   |
-| Factory method   | Composite       | Interpreter               |
-| Prototype        | Decorator       | Iterator                  |
-| Singleton        | Facade          | Mediator                  |
-|                  | Flyweight       | Memento                   | 
-|                  | Proxy           | Observer                  |
-|                  |                 | State                     |
-|                  |                 | Strategy                  |
-|                  |                 | Template Method           |
-|                  |                 | Visitor                   |
+GoF are documented in the famous Design Patterns: Elements of Reusable Object Oriented Software (by Erich Gamma, Richard Helm, Ralph Jonhson, John Vlissides)
 
-#### Creational
+== GoF Patterns - Creational
+
+
 * Abstract Factory:
 
 Use this pattern when you want to provide a mechanism to create families of objects without specifying their concrete classes.
@@ -83,7 +82,7 @@ Create multiple objects based on an existing prototype instance. This pattern is
 
 This pattern ensure that a class has one and only one instance available. The pattern must provide a way to access this single instance.
 
-#### Structural
+== GoF Patterns - Structural
 * Adapter      
 
 Use this pattern when you have a class that needs to be used by a client, but that client expects a different or a specific interface. 
@@ -113,8 +112,7 @@ Use this pattern when your objects representation is heavy in memory and where y
 
 Think of this pattern as an adapter with the same interface, the idea to wrap a service operation around another object that can control the behavior, for example lazy loading, calling remote operation and what not.
 
-
-#### Behavioral
+== GoF Patterns - Behavioral
 * Chain of responsibility      
 
 Think about this pattern when you want to the chain the processing of a request across multiples objects. Basically, pass the request across a chain of multiples objects to allow each to handle the request.
@@ -158,8 +156,10 @@ Use this pattern whenever you want to provide a partial implementation of an alg
 
 This pattern come at help when you want to apply a certain behavior on an object without having to integrate it into the structure of the class. The pattern let you visit an object in a collection and apply a certain behavior.
 
-### SOLID
+== SOLID
+
 The acronym is composed of the first letter of each principle that is described as follow:
+[.do]
 
 1. Single Responsibility (SRP):
    - A class should have one and only one reason to change.
@@ -177,4 +177,5 @@ The acronym is composed of the first letter of each principle that is described 
    - The higher modules should always hold the dependency abstraction.
 
 Each pattern will be described using the ptolemy project or other teams examples. A reference will be pointing to the specific application classes implementing the example.
+
 
